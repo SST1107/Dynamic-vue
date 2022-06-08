@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dymamic vue</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1></h1>
+        <div id="app">
+            <ul>
+                <li v-for="(member,index) in members">
+                    {{index}}:{{member.name}}
+                    <!-- v-show：依據條件決定是否顯示 -->
+                    <!-- v-if/v-else-if/v-else：依據條件決定顯示哪項 -->
+                        <span v-if="member.gender=='Female'">--這位是女孩</span>
+                        <span v-else-if="member.gender=='Male'">--這位是男孩</span>
+                        <span v-else>--性別未登記</span>
+                </li>
+            </ul>
+        </div>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
